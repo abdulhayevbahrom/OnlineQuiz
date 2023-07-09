@@ -23,11 +23,13 @@ mongoose.connect(process.env.DATABASE)
 //=========== ROUTES ==========
 const quiz = require('./routes/quiz')
 const admins = require('./routes/admin')
+const history = require('./routes/history')
 
 //=========== ENTPOINTS ==========
 
 app.use("/quizes", quiz)
 app.use("/admins", admins)
+app.use("/history", history)
 
 
 const PORT = process.env.PORT || 8000
